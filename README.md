@@ -29,6 +29,7 @@ SUFT算法是sift算法的改进版，其计算量较SIFT算法较小。由于SI
 
 ## 3. Canny算法(边缘检测)
 
+边缘检测算法较为简单和基础，不作赘述
 ![效果图](./pictures/canny.png)
 
 ```python

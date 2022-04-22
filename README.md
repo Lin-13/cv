@@ -41,3 +41,31 @@ SUFT算法是sift算法的改进版，其计算量较SIFT算法较小。由于SI
         cv2.waitKey(0)
         cv2.destroyAllWindows()
 ```
+
+## 4. Hurris算法(角点检测)
+
+**Hurris算法**通过计算角点的梯度和方向，来检测角点。该算法计算偏移量矩阵M，通过计算该矩阵的特征值来判断其性质。若特征值大于阈值，则认为该点是角点。若特征值小于阈值，则认为该点不是角点。若两个特征值比值较大，则其为图像边缘。
+
+```python
+        import cv2
+        import numpy as np
+        src=cv2.imread('test.jpg',0)#以灰度读取图像
+        corner=cv2.cornerHarris(src,2,3,0.04)#计算角点
+        corner=cv2.threshold(corner,0.1*corner[1].max(),255,cv2.THRESH_BINARY)
+```
+
+其改进方法goodFeathersToTrack()主要区别再去判断方法不同，该方法判断方式为：当两个特征值均大于一定值是判断其为角点，只有一个大于阈值时判断其为边缘，当两个特征值均小于阈值时判断其为边缘。
+
+```python
+        import cv2
+        import numpy as np
+        src=cv2.imread('test.jpg',0)#以灰度读取图像
+        corner=cv2.goodFeaturesToTrack(src,100,0.01,10)#计算角点
+        corner=np.int0(corner)
+        for i in corner:
+            x,y=i.ravel()
+            cv2.circle(src,(x,y),3,255,-1)
+        cv2.imshow('corner',src)
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
+```

@@ -36,6 +36,6 @@ thickness = 2
 sv = svm.getUncompressedSupportVectors()
 for i in range(sv.shape[0]):
     cv.circle(image, (int(sv[i,0]), int(sv[i,1])), 6, (128, 128, 128), thickness)
-cv.imwrite('result.png', image) # save the image
+cv.imwrite('.\\pictures\\svm.png', image) # save the image
 cv.imshow('SVM Simple Example', image) # show it to the user
 cv.waitKey()

@@ -9,4 +9,5 @@ cv2.imshow("dst",dst)
 #Laplacian算子，二阶偏导之和
 dst_l=cv2.Laplacian(srcgray,CV_8UC3,dst,3,0.1)
 cv2.imshow("dst_l",dst_l)
+cv2.imwrite(".\\pictures\\canny.jpg",dst)
 cv2.waitKey(0)

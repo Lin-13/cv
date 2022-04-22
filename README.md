@@ -20,3 +20,7 @@ sift算法核心是构建一个SIFT描述子，然后对图像进行描述，描
         cv2.waitKey(0)
         cv2.destroyAllWindows()
 ```
+
+## 2、SURF算法
+
+SUFT算法是sift算法的改进版，其计算量较SIFT算法较小。由于SIFT算法已申请专利，较高版本已将其移除。

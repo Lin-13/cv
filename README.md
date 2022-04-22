@@ -25,4 +25,4 @@ sift算法核心是构建一个SIFT描述子，然后对图像进行描述，描
 
 SUFT算法是sift算法的改进版，其计算量较SIFT算法较小。由于SIFT算法已申请专利，较高版本已将其移除。
 
-![SUFT](./pictures/suft.png)
+![SUFT](pictures/suft.png)

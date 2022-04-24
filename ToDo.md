@@ -6,9 +6,9 @@
 虽然还有很多算法没有深入学习，但是现在对于特征识别的算法告将一段落。我将更加关注OpenCV算法中对于视频流的支持和相关处理算法，以及OpenCV代码的部署。
 三维重建算法可以通过opencv的相关函数实现，其依赖的算法较多。
 
-[](https://blog.csdn.net/qq_36007951/article/details/78909816)
+[https://blog.csdn.net/qq_36007951/article/details/78909816](https://blog.csdn.net/qq_36007951/article/details/78909816)
 
-[](https://blog.csdn.net/m0_51233386/article/details/113487099)
+[https://blog.csdn.net/m0_51233386/article/details/11348709](https://blog.csdn.net/m0_51233386/article/details/113487099)
 
 OpenCV部署问题主要集中在不同版本的支持代码不同，以及性能问题。考虑到各方面问题，我希望能将代码部署到linux系统中，并考虑使用cuda加速的可能性。
 
